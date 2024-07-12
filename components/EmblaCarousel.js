@@ -6,17 +6,18 @@ const EmblaCarousel = (props) => {
   const { slides } = props
   const [emblaRef] = useEmblaCarousel({ 
     loop: true,
-    watchDrag: false,
-  }, [Autoplay()])
+  }, [Autoplay({
+    stopOnInteraction: false
+  })])
 
   return (
-    <section className="overflow-hidden w-full mb-6" ref={emblaRef}>
+    <section className="overflow-hidden w-full" ref={emblaRef}>
       <div className="flex">
         {slides.map((src, index) => (
-          <div className="mr-4 flex-shrink-0" key={index}>
-            <Image 
-              width={380} 
-              height={570}
+          <div className="mr-[24px] flex-shrink-0" key={index}>
+            <Image
+              width={355} 
+              height={473}
               src={src}
               alt="test" 
             />

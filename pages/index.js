@@ -2,24 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const SLIDES = Array.from(Array(15).keys()).map(v => '/test.jpg')
-const BLOCKS = [{
-  img: '/test.jpg',
-  link: 'wedding',
-  label: 'Wedding',
-}, {
-  img: '/test.jpg',
-  link: 'portrait',
-  label: 'Portrait',
-}, {
-  img: '/test.jpg',
-  link: 'family',
-  label: 'Family',
-}, {
-  img: '/test.jpg',
-  link: 'documentary',
-  label: 'Documentary',
-}]
+const SLIDES = Array.from(Array(14).keys()).map(v => `/index-carousel-${v+1}.jpg`)
 
 import EmblaCarousel from '@/components/EmblaCarousel'
 
@@ -29,30 +12,18 @@ export default function Home() {
       <Head>
         <title>Chansy Hu Photography</title>
       </Head>
-      <header className="flex flex-col items-center">
-        <h1 className="text-4xl mt-8 mb-2">CHANSY HU</h1>
-        <h2 className="text-xl mb-6">Photography</h2>
-      </header>
-      <main className="flex-grow flex flex-col w-full items-center">
-        <EmblaCarousel slides={SLIDES} />
-        <section className="bg-gray-400 text-white py-6 px-10 flex justify-center w-[720px] mb-8">
-          <p className="max-w-full">
-            introduction, introduction, introduction, introduction, introduction, introduction, introduction, introduction, introduction, introduction, introduction, introduction, introduction, introduction, introduction.
-          </p>
-        </section>
-        <section className="flex mb-10 divide-x-[12px]">
-          {BLOCKS.map((item, index) => (
-            <Link className="relative" href={item.link} key={index}>
-              <Image 
-                className="absolute -z-10" 
-                width={240} 
-                height={360} 
-                src={item.img} 
-                alt={item.label} 
-              />
-              <div className="w-[240px] h-[360px] text-white flex justify-center items-center text-2xl bg-black bg-opacity-30">{item.label}</div>
-            </Link>
-          ))}
+      <main className="flex-grow flex flex-col w-full items-center pb-[130px]">
+        <div className="w-[1200px] py-[130px]">
+          <EmblaCarousel slides={SLIDES} />
+        </div>
+
+        <section className="flex flex-col items-center w-[600px]">
+          <p className="font-[Cantarell] tracking-[.2em] text-[16px] mb-[24px]">ARTISTICALLY CRAFTED PORTRAITS FOR THE DARLING</p>
+          <p className="italic tracking-[.1em] text-[18px] mb-[24px]">wedding • engagement • elopement</p>
+          <p className="tracking-[.1em] text-[16px] mb-[64px] text-center">Creature brought darkness given itself there. And spirit fifth greater good forth have them all. Yielding have also</p>
+          <Link className="w-[245px] h-[60px] bg-[#77817E] flex justify-center items-center text-white italic text-[18px] tracking-[.1em]" href="/contact">
+            Contact
+          </Link>
         </section>
       </main>
     </>
