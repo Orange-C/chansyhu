@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.category-card:hover > .category-title {
+    transform: translateY(-8px);
+}
