@@ -8,7 +8,7 @@ function CategoryLink({ imgSrc, value }) {
   return (
     <Link href={`/portfolio/${value}`} className="relative">
       <Image width={373} height={560} src={imgSrc} alt="portfolio category" />
-      <div className="w-full h-full absolute top-0 left-0 font-['Bodoni Moda SC'] flex items-center justify-center text-[32px] text-white uppercase tracking-[.2em] bg-black/20 hover:bg-black/40 transition duration-200 category-card">
+      <div className="w-full h-full absolute top-0 left-0 font-['Bodoni Moda SC'] flex items-center justify-center text-[32px] text-white uppercase tracking-[.2rem] bg-black/20 hover:bg-black/40 transition duration-200 category-card">
         <div className="flex flex-col justify-center transition duration-200 category-title">
           <span>{value}</span>
           <span className="material-symbols-outlined mt-[8px] text-center">arrow_forward</span>

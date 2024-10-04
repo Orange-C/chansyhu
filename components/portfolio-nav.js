@@ -3,10 +3,10 @@ import Link from 'next/link';
 export default function PortfolioNav() {
   return (
     <div className="flex flex-col items-center">
-      <Link className="tracking-[.2em] uppercase hover:underline font-[Cantarell]" href="/portfolio">
+      <Link className="tracking-[.2rem] uppercase hover:underline font-[Cantarell]" href="/portfolio">
         portfolio
       </Link>
-      <nav className="flex mt-[32px] tracking-[.1em] italic">
+      <nav className="flex mt-[32px] tracking-[.1rem] italic">
         <Link className="px-[32px] hover:underline" href="/portfolio/wedding">
           wedding
         </Link>

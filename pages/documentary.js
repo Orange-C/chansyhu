@@ -17,11 +17,11 @@ export default function Documentary() {
           <Image width={400} height={400} src="/square-img.jpg" alt="Documentary" />
         </div>
         <div className="flex flex-col justify-center w-[500px] text-center pt-[96px]">
-          <p className="uppercase my-[32px] font-[Cantarell] tracking-[.2em]">Documentary</p>
-          <p className="italic tracking-[.2em] mb-[64px]">
+          <p className="uppercase my-[32px] font-[Cantarell] tracking-[.2rem]">Documentary</p>
+          <p className="italic tracking-[.2rem] mb-[64px]">
             CALIFORNIA . ULTA . Arizona . Oregon . HONGKONG . SINGGPORE . KOREA . THAILAND
           </p>
-          <p className="tracking-[.1em]">
+          <p className="tracking-[.1rem]">
             In life, I always use a camera to record the beautiful moments happening in the world.
           </p>
         </div>

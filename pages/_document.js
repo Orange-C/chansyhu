@@ -6,11 +6,11 @@ export default function Document() {
       <Head>
         <meta
           name="description"
-          content="Chansy Hu is a photographer who specializes in pre-wedding, portrait, and family moments."
+          content="Chansy Hu is a photographer who specializes in engagement, wedding, portrait, and family moments."
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin={true} />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap"
           rel="stylesheet"
@@ -26,7 +26,7 @@ export default function Document() {
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
       </Head>
-      <body>
+      <body className="bg-[#f7f7f7]">
         <Main />
         <NextScript />
       </body>

@@ -30,7 +30,7 @@ export default function GalleryImage({ src, square, imgList, index }) {
           alt="gallery image"
         />
         <span
-          class="material-symbols-outlined cursor-pointer absolute right-[10px] top-[10px] text-[32px]"
+          className="material-symbols-outlined cursor-pointer absolute right-[10px] top-[10px] text-[32px]"
           onClick={() => setVisible(false)}
         >
           close
