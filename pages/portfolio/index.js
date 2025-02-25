@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import PortfolioNav from '@/components/portfolio-nav';
+// import PortfolioNav from '@/components/portfolio-nav';
 
 function CategoryLink({ imgSrc, value }) {
   return (
@@ -25,19 +25,17 @@ export default function Portfolio() {
         <title>Chansy Hu Photography | Portfolio</title>
       </Head>
       <div className="w-full h-[380px] bg-[#f7f7f7] absolute -z-10" />
-      <div className="py-[60px]">
-        <PortfolioNav />
-      </div>
-      <div className="flex gap-[24px] mb-[24px]">
+      {/* <div className="py-[60px]"><PortfolioNav /></div> */}
+      <div className="flex gap-[24px] mb-[24px] mt-[60px]">
         <CategoryLink value="wedding" imgSrc="/index-carousel-1.jpg" />
         <CategoryLink value="elopement" imgSrc="/index-carousel-2.jpg" />
         <CategoryLink value="engagement" imgSrc="/index-carousel-3.jpg" />
       </div>
-      <div className="flex gap-[24px] mb-[100px]">
+      {/* <div className="flex gap-[24px] mb-[100px]">
         <CategoryLink value="portrait" imgSrc="/index-carousel-4.jpg" />
         <CategoryLink value="family" imgSrc="/index-carousel-5.jpg" />
         <CategoryLink value="event" imgSrc="/index-carousel-6.jpg" />
-      </div>
+      </div> */}
     </>
   );
 }
