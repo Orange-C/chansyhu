@@ -29,11 +29,11 @@ export default function Header() {
 
         {/* mobile nav */}
         {!showNav ? (
-          <span class="material-symbols-outlined pr-6 md:hidden select-none" onClick={() => setShowNav(true)}>
+          <span class="material-symbols-outlined pr-6 md:!hidden select-none" onClick={() => setShowNav(true)}>
             menu
           </span>
         ) : (
-          <span className="material-symbols-outlined pr-6 md:hidden select-none" onClick={() => setShowNav(false)}>
+          <span className="material-symbols-outlined pr-6 md:!hidden select-none" onClick={() => setShowNav(false)}>
             close
           </span>
         )}
