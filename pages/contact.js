@@ -6,17 +6,17 @@ export default function Contact() {
       <Head>
         <title>Chansy Hu Photography | Contact</title>
       </Head>
-      <div className="w-full h-[536px] bg-[url(/index-carousel-1.jpg)] bg-no-repeat bg-cover bg-center" />
-      <p className="uppercase my-[48px] font-[Cantarell] tracking-[.2rem]">Let&apos;s work together</p>
-      <p className="w-[960px] tracking-[.1rem] text-center">
+      {/* <div className="w-full h-[536px] bg-[url(/index-carousel-1.jpg)] bg-no-repeat bg-cover bg-center" /> */}
+      <p className="uppercase my-12 font-[Cantarell] tracking-[.2rem]">Let&apos;s work together</p>
+      <p className="max-md:px-4 md:w-[60rem] tracking-[.1rem] text-center">
         Divide meat called moving behold together spirit us man blessed can&apos;t great greater, without gathering
         earth, fruit own rule saw all fowl seed gathering subdue rule his won&apos;t above light fourth. Saying female.
       </p>
-      <div className="flex justify-between w-[600px] mt-[64px] text-center tracking-[.1rem] mb-[100px]">
+      <div className="flex max-md:flex-col justify-between md:w-[40rem] mt-[64px] text-center tracking-[.1rem] mb-24">
         <div className="flex flex-col justify-center">
           <a
             href="mailto:chansyhuhu@gmail.com"
-            className="w-[245px] h-[60px] bg-[#77817E] flex justify-center items-center text-white italic text-[18px]"
+            className="w-64 h-16 bg-[#77817E] flex justify-center items-center text-white italic text-lg"
           >
             Email
           </a>
@@ -27,7 +27,7 @@ export default function Contact() {
           <a
             href="https://www.instagram.com/chansyhu/"
             target="_blank"
-            className="w-[245px] h-[60px] bg-[#77817E] flex justify-center items-center text-white italic text-[18px]"
+            className="w-64 h-16 bg-[#77817E] flex justify-center items-center text-white italic text-lg"
           >
             Instagram
           </a>

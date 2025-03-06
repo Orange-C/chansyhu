@@ -2,24 +2,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
-const NAV_CONFIG = [
-  {
-    path: '/',
-    label: 'home',
-  },
-  {
-    path: '/portfolio',
-    label: 'portfolio',
-  },
-  // {
-  //   path: '/documentary',
-  //   label: 'documentary',
-  // },
-  {
-    path: '/contact',
-    label: 'contact',
-  },
-];
+import { NAV_CONFIG } from '@/const/config';
+import classNames from 'classnames';
 
 export default function Header() {
   const [showNav, setShowNav] = useState(false);
@@ -45,25 +29,40 @@ export default function Header() {
 
         {/* mobile nav */}
         {!showNav ? (
-          <span class="material-symbols-outlined pr-6 md:hidden cursor-pointer" onClick={() => setShowNav(true)}>
+          <span class="material-symbols-outlined pr-6 md:hidden select-none" onClick={() => setShowNav(true)}>
             menu
           </span>
         ) : (
-          <span className="material-symbols-outlined pr-6 md:hidden cursor-pointer" onClick={() => setShowNav(false)}>
+          <span className="material-symbols-outlined pr-6 md:hidden select-none" onClick={() => setShowNav(false)}>
             close
           </span>
         )}
         {showNav && (
           <nav className="absolute bg-[#f7f7f7] top-20 w-full flex flex-col items-center h-[calc(100vh-5rem)] pt-10 uppercase">
-            {NAV_CONFIG.map((v, i) => (
-              <Link
-                key={v.path}
-                className="py-6 text-2xl tracking-widest hover:underline"
-                href={v.path}
-                onClick={() => setShowNav(false)}
-              >
-                {v.label}
-              </Link>
+            {NAV_CONFIG.map(v => (
+              <>
+                <Link
+                  key={v.path}
+                  className={classNames(
+                    'text-2xl tracking-widest hover:underline',
+                    Boolean(v.children) ? 'pt-10 pb-4' : 'py-10',
+                  )}
+                  href={v.path}
+                  onClick={() => setShowNav(false)}
+                >
+                  {v.label}
+                </Link>
+                {v.children?.map(vc => (
+                  <Link
+                    key={vc.path}
+                    className="pb-4 text-lg tracking-widest hover:underline"
+                    href={`/${v.path}/${vc.path}`}
+                    onClick={() => setShowNav(false)}
+                  >
+                    {vc.label}
+                  </Link>
+                ))}
+              </>
             ))}
           </nav>
         )}
